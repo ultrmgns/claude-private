@@ -131,6 +131,12 @@ After patching, run:
 `bash install.sh` 
 To put it in ~/.local/bin/ so you are able to run it from the terminal
 
+Run 
+```
+sudo codesign --force --sign - --preserve-metadata=entitlements ~/.local/bin/claude-private
+sudo codesign --force --sign - --preserve-metadata=entitlements ~/.local/bin/claude-notelemetry
+```
+To bypass code signing restrictions in MacOS 26. Will need to be done after every patch.
 
 To run it (recommend LM Studio server (free) with endpoint support: `anthropic-compatible`
 example command: `ANTHROPIC_BASE_URL=http://localhost:1234 claude-private`

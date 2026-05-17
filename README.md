@@ -134,7 +134,6 @@ To put it in ~/.local/bin/ so you are able to run it from the terminal
 Run 
 ```
 sudo codesign --force --sign - --preserve-metadata=entitlements ~/.local/bin/claude-notelemetry
-sudo codesign --force --sign - --preserve-metadata=entitlements ~/.local/bin/claude-notelemetry
 ```
 To bypass code signing restrictions in MacOS 26. Will need to be done after every patch.
 
